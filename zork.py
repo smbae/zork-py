@@ -1,4 +1,3 @@
-# Introduction narration of game
 loop = 3
 while loop == 3:
 	print("---------------------------------------------------------")
@@ -10,42 +9,42 @@ while loop == 3:
 
 
 	# First Screen and Input
-	first = input(str("What do you do? "))
+	first = raw_input("What do you do? ")
 	if first.lower() == ("take mailbox"):
 		print("---------------------------------------------------------")
 		print("You cannot be serious.")
 		loop = 4
-	if first.lower() == ("open mailbox"):
+	elif first.lower() == ("open mailbox"):
 		print("---------------------------------------------------------")
 		print("Opening the small mailbox reveals a leaflet.")
 		loop = 4
-	if first.lower() == ("go east"):
+	elif first.lower() == ("go east"):
 		print("---------------------------------------------------------")
 		print("The door is boarded and you cannot remove the boards.")
 		loop = 4
-	if first.lower() == ("open door"):
+	elif first.lower() == ("open door"):
 		print("---------------------------------------------------------")
 		print("The door cannot be opened.")
 		loop = 4
-	if first.lower() == ("take boards"):
+	elif first.lower() == ("take boards"):
 		print("---------------------------------------------------------")
 		print("The boards are securely fastened.")
 		loop = 4
-	if first.lower() == ("look at house"):
+	elif first.lower() == ("look at house"):
 		print("---------------------------------------------------------")
 		print("The house is a beautiful colonial house which is painted white. It is clear that the owners must have been extremely wealthy.")
 		loop = 4
-	if first.lower() == ("read leaflet"):
+	elif first.lower() == ("read leaflet"):
 		print("---------------------------------------------------------")
 		print("Welcome to the Unofficial Python Version of Zork. Your mission is to find a Jade Statue.")
 		loop = 4
-	if first.lower() == ("go southwest"):
+	elif first.lower() == ("go southwest"):
 		loop = 8
 	else:
 		print("---------------------------------------------------------")
 		print("I don't understand that command.")
 		loop = 4
-	
+
 
 	# First Input Loop
 	while loop == 4:
@@ -54,44 +53,42 @@ while loop == 3:
 			print("You are standing in an open field west of a white house, with a boarded front door.")
 			print("(A secret path leads southwest into the forest.)")
 			print("There is a Small Mailbox.")
-			second = input(str("What do you do? "))
+			second = raw_input("What do you do? ")
 		if second.lower() == ("take mailbox"):
 			print("---------------------------------------------------------")
 			print("It is securely anchored.")
 			hello = 2
-		if second.lower() == ("open mailbox"):
+		elif second.lower() == ("open mailbox"):
 			print("---------------------------------------------------------")
 			print("Opening the small mailbox reveals a leaflet.")
 			hello = 2
-		if second.lower() == ("go east"):
+		elif second.lower() == ("go east"):
 			print("---------------------------------------------------------")
 			print("The door is boarded and you cannot remove the boards.")
 			hello = 2
-		if second.lower() == ("open door"):
+		elif second.lower() == ("open door"):
 			print("---------------------------------------------------------")
 			print("The door cannot be opened.")
 			hello = 2
-		if second.lower() == ("take boards"):
+		elif second.lower() == ("take boards"):
 			print("---------------------------------------------------------")
 			print("The boards are securely fastened.")
 			hello = 2
-		if second.lower() == ("look at house"):
+		elif second.lower() == ("look at house"):
 			print("---------------------------------------------------------")
 			print("The house is a beautiful colonial house which is painted white. It is clear that the owners must have been extremely wealthy.")
 			hello = 2
-		if second.lower() == ("go southwest"):
+		elif second.lower() == ("go southwest"):
 			loop = 8
-		if second.lower() == ("read leaflet"):
+		elif second.lower() == ("read leaflet"):
 			print("---------------------------------------------------------")
 			print("Welcome to the Unofficial Python Version of Zork. Your mission is to find a Jade Statue.")
 			loop = 4
-		if second.lower() == ("go southwest"):
-			loop = 8
 		else:
 			print("---------------------------------------------------------")
 			print("I don't understand that command.")
 			loop = 4
-	
+
 
 	# Southwest Loop
 	while loop == 8:
@@ -117,7 +114,7 @@ while loop == 3:
 			print("---------------------------------------------------------")
 			print("I don't understand that command.")
 			loop = 8
-	
+
 
 	# East Loop and Grating Input
 	while loop == 9:
@@ -135,7 +132,7 @@ while loop == 3:
 		else:
 			print("---------------------------------------------------------")
 			print("I don't understand that command.")
-			loop = 9	
+			loop = 9
 
 
 	# Grating Loop and Cave Input
@@ -197,7 +194,7 @@ while loop == 3:
 			print("---------------------------------------------------------")
 			print("I don't understand that command.")
 			loop = 11
-		
+
 		# Exit loop at the end of game
 		exit_inp = input(str("Do you want to continue? Y/N "))
 		if exit_inp.lower() == ("n"):
@@ -205,6 +202,3 @@ while loop == 3:
 			quit(1)
 		if exit_inp.lower() == ("y"):
 			loop = 3
-
-
-
